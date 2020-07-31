@@ -14,9 +14,9 @@ const forecast = (lon, lat, callback) => {
     } else if (body.error) {
       callback("Unable to find the location.", undefined);
     } else {
-      callback(undefined, {
-        relativeHumidity: body.data[0].rh,
-      });
+      callback(undefined, 
+       'Relative humidity is ' + body.data[0].rh,
+      );
     }
   });
 };
